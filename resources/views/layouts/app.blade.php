@@ -11,7 +11,7 @@
     @yield('styles')
     <title>@yield('title')</title>
   </head>
-  <body>
+  <body class="bg-light">
     @yield('content')
 
     <!-- Optional JavaScript; choose one of the two! -->
