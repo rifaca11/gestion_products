@@ -32,7 +32,6 @@ Route::get('/login/show', function () {
 
 //login
 Route::post('/login', [UserController::class, 'login'])->name('user@login');
-
 //create user
 Route::post('/register', [UserController::class, 'store'])->name('register@store');
 
@@ -45,7 +44,6 @@ Route::get('/user/{user}/profile', [UserController::class, 'showProfile'])->name
 Route::get('/user/displayUsers', [UserController::class, 'index'])->name('users@index')->middleware('auth');
 
 Route::get('/user/showAddUser', [UserController::class, 'showAddUser'])->name('users@showAddUser')->middleware('auth');
-
 
 Route::POST('/user/addUser', [UserController::class, 'addUser'])->name('users@addUser')->middleware('auth');
 

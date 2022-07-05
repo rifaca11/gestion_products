@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Hash;
+// use Hash;
 
 class UserController extends Controller
 {
@@ -42,8 +42,7 @@ class UserController extends Controller
                 'email' => 'required|email',
                 'password' => 'required|min:3|max:255',
             ]);
-            // dd($request->all());
-
+            // dd($request->all()); 
         if(auth()->attempt($formFields)){
             return redirect('/');
         }

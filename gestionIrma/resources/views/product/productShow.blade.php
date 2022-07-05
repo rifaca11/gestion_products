@@ -7,7 +7,7 @@
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-          src="{{ $product->image}}">
+          src="{{ $product->image }}">
         </div>
       </div>
 
@@ -18,12 +18,11 @@
         </p>
         <div class="flex">
             <span class="title-font font-medium text-2xl text-gray-900 mx-5">${{ $product->price}}</span>
-
             <form action="{{route('product@update', $product)}}" method="POST" >
               @csrf
               @method('PUT')
             <button type="submit" class="flex ml-auto text-white bg-blue-500 border-0 py-2 px-2 focus:outline-none hover:bg-blue-600 rounded-full">
-              <i class="fa-solid fa-pen-to-square"></i>
+              <i class="fa-solid fa-display"></i>
             </button>
           </form>
             <form action="{{route('product@destroy', $product)}}" method="POST" >
